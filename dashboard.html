@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | herCircle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+  <div class="dashboard">
+    <h2>Track Your Period</h2>
+    <input type="date" id="startDate" required />
+    <select id="mood">
+      <option value="Happy">Happy</option>
+      <option value="Sad">Sad</option>
+      <option value="Angry">Angry</option>
+      <option value="Neutral">Neutral</option>
+    </select>
+    <select id="flow">
+      <option value="Light">Light</option>
+      <option value="Medium">Medium</option>
+      <option value="Heavy">Heavy</option>
+    </select>
+    <textarea id="note" placeholder="Any notes..."></textarea>
+    <button onclick="trackPeriod()">Track Period</button>
+    <button onclick="showPeriodHistory()">View History</button>
+    <button onclick="handleLogout()">Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
