@@ -1,4 +1,4 @@
-# 🌸 herCircle
+# 🩸 herCircle
 
 A simple and private period tracking application designed for girls to monitor their monthly cycles and receive warm, supportive messages. Built using **HTML**, **CSS**, and **JavaScript** 
 ##  Features

@@ -2,28 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard | herCircle</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body onload="checkLogin()">
   <div class="dashboard">
+    <div class="logo">🩸</div>
     <h2>Track Your Period</h2>
-    <input type="date" id="startDate" required />
-    <select id="mood">
-      <option value="Happy">Happy</option>
-      <option value="Sad">Sad</option>
-      <option value="Angry">Angry</option>
-      <option value="Neutral">Neutral</option>
-    </select>
-    <select id="flow">
-      <option value="Light">Light</option>
-      <option value="Medium">Medium</option>
-      <option value="Heavy">Heavy</option>
-    </select>
-    <textarea id="note" placeholder="Any notes..."></textarea>
-    <button onclick="trackPeriod()">Track Period</button>
-    <button onclick="showPeriodHistory()">View History</button>
-    <button onclick="handleLogout()">Logout</button>
+    <p class="welcome-text">Log your daily period data to track patterns and maintain your health</p>
+    
+    <div class="input-group">
+      <input type="date" id="startDate" required />
+    </div>
+    
+    <div class="form-grid">
+      <div class="input-group">
+        <select id="mood">
+          <option value="" disabled selected>Select Mood</option>
+          <option value="Happy">😊 Happy</option>
+          <option value="Sad">😢 Sad</option>
+          <option value="Angry">😠 Angry</option>
+          <option value="Neutral">😐 Neutral</option>
+          <option value="Anxious">😰 Anxious</option>
+          <option value="Energetic">⚡ Energetic</option>
+        </select>
+      </div>
+      
+      <div class="input-group">
+        <select id="flow">
+          <option value="" disabled selected>Flow Intensity</option>
+          <option value="Light">🟡 Light</option>
+          <option value="Medium">🟠 Medium</option>
+          <option value="Heavy">🔴 Heavy</option>
+          <option value="Spotting">⚪ Spotting</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="input-group">
+      <textarea id="note" placeholder="Any notes, symptoms, or observations..."></textarea>
+    </div>
+    
+    <div class="button-group">
+      <button class="primary" onclick="trackPeriod()">
+        <i class="fas fa-plus-circle"></i> Track Period
+      </button>
+      <button class="secondary" onclick="showPeriodHistory()">
+        <i class="fas fa-history"></i> View History
+      </button>
+      <button class="tertiary" onclick="handleLogout()">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+    
+    <div id="periodStats" class="period-stats" style="display: none;">
+      <h3><i class="fas fa-chart-line"></i> Your Cycle Stats</h3>
+      <p id="lastPeriod">Last period: -</p>
+      <p id="nextPeriod">Next expected: -</p>
+      <p id="cycleLength">Average cycle: -</p>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

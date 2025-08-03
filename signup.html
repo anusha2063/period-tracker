@@ -2,17 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up | herCircle</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="form-container">
+    <div class="logo">🩸</div>
+    <h2>Join herCircle</h2>
+    <p class="welcome-text">Start your journey to better period health tracking</p>
+    
     <form onsubmit="handleSignup(event)">
-      <h2>Create Your Account </h2>
-      <input type="email" id="signupEmail" placeholder="Email" required />
-      <input type="password" id="signupPassword" placeholder="Password" required />
-      <button type="submit">Sign Up</button>
-      <p>Already have an account? <a href="index.html">Login</a></p>
+      <div class="input-group">
+        <input type="email" id="signupEmail" placeholder="Enter your email" required />
+      </div>
+      
+      <div class="input-group">
+        <input type="password" id="signupPassword" placeholder="Create a password" required />
+      </div>
+      
+      <div class="button-group">
+        <button type="submit" class="primary">
+          <i class="fas fa-user-plus"></i> Create Account
+        </button>
+      </div>
+      
+      <p>Already have an account? <a href="index.html">Login here</a></p>
     </form>
   </div>
   <script src="script.js"></script>
